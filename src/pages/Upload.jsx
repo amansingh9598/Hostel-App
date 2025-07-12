@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
 
-const Upload = () => {
+const Upload = ({setHostels}) => {
   const [form, setForm] = useState({
     name: "",
     rent: "",
@@ -10,13 +11,20 @@ const Upload = () => {
     contact: ""
   });
 
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     setForm({...form, [e.target.name]: e.target.value});
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setForm({ name: "", rent: "", facilities: "", location: "", contact: "" });
+    const newHostel={
+      ...form,
+      createAt:new Date().toISOString().split("T")[0]
+    };
+    setHostels(prev => [newHostel, ...prev]);
+    navigate("/");
   };
 
   return (

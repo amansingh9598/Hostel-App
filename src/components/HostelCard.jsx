@@ -6,6 +6,7 @@ const HostelCard = ({ hostel }) => {
       <p>Facilities:{hostel.facilities}</p>
       <p>Location:{hostel.location}</p>
       <p>Contact:{hostel.contact}</p>
+      <p className="text-sm text-gray-500">Uploaded on:{hostel.createdAt}</p>
     </div>
   );
 };

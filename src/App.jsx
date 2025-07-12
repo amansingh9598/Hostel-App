@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Upload from "./pages/Upload";
 import { useState } from "react";
+import About from "./pages/About";
 
 function App() {
   const [hostels, setHostels] = useState([{
@@ -158,6 +159,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home hostels={hostels}/>} />
         <Route path="/upload" element={<Upload setHostels={setHostels}/>} />
+        <Route path="/about" element={<About/>} />
       </Routes>
     </Router>
   );

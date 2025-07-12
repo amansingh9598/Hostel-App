@@ -4,8 +4,8 @@ const Navbar = () => {
       <h1 className="text-white text-2xl font-bold">HostelMate</h1>
       <div className="flex gap-4">
         <a href="/" className="text-white">Home</a>
-        <a href="/upload" className="text-white">Upload</a>
-        <a href="/about" className="text-white">About</a>
+        <a href="/Hostel-App/upload" className="text-white">Upload</a>
+        <a href=" /Hostel-App/about" className="text-white">About</a>
       </div>
     </nav>
   );
